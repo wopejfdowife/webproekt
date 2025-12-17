@@ -1,0 +1,380 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 5px solid #d35400;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Навигация */
+nav {
+    background-color: #34495e;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 18px 25px;
+    display: block;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li a:hover {
+    background-color: #2c3e50;
+    border-bottom: 3px solid #d35400;
+}
+
+/* Основные секции */
+.section {
+    background-color: white;
+    margin: 40px 0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #d35400;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* Таймлайн истории */
+.history-timeline {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 65px;
+    top: 50px;
+    bottom: -35px;
+    width: 2px;
+    background-color: #d35400;
+    opacity: 0.5;
+}
+
+.timeline-year {
+    background: linear-gradient(135deg, #d35400 0%, #e67e22 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    min-width: 130px;
+    text-align: center;
+    margin-right: 30px;
+    height: fit-content;
+    box-shadow: 0 4px 8px rgba(211, 84, 0, 0.3);
+    z-index: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-top: 5px;
+}
+
+.timeline-content h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Карточки гроссмейстеров */
+.masters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.master-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: white;
+    position: relative;
+}
+
+.master-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: #d35400;
+}
+
+.master-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#steinitz {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                      url('https://images.unsplash.com/photo-1586165368501-4c0b36c58c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+}
+
+#capablanca {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                      url('https://images.unsplash.com/photo-1543092587-d1b3f7488e41?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+}
+
+#alehin {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                      url('https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+}
+
+#fisher {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                      url('https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+}
+
+#kasparov {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                      url('https://images.unsplash.com/photo-1585506936724-fa0c19c7b3c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+}
+
+#carlsen {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                      url('https://images.unsplash.com/photo-1543453047-2c8b7077f8b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+}
+
+.master-content {
+    padding: 25px;
+}
+
+.master-name {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.master-years {
+    color: #d35400;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.master-country {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Достижения */
+.achievements {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #d35400;
+}
+
+.achievements ul {
+    padding-left: 20px;
+}
+
+.achievements li {
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+/* Современные шахматы */
+.modern-chess {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.modern-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid #3498db;
+}
+
+.modern-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Подвал */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    color: #d35400;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    nav ul li a {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .section {
+        padding: 25px 20px;
+        margin: 25px 0;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+    }
+    
+    .timeline-item:not(:last-child)::after {
+        left: 15px;
+        top: 50px;
+        bottom: -35px;
+    }
+    
+    .timeline-year {
+        margin-right: 0;
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+    
+    .masters-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .modern-chess {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section {
+        padding: 20px 15px;
+    }
+    
+    .master-img {
+        height: 180px;
+    }
+}
